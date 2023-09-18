@@ -1,14 +1,12 @@
 # Basic inputs
 ml=50
-mainjob=BRD
-subjob=NIN
+mainjob=WAR
+subjob=SAM
 aftermath=0
-
-mintp=1000
-maxtp=1500
+mintp=2000
+maxtp=2000
 spell=None
-ws=Savage Blade
-
+ws=Resolution
 initialtp=0
 odyrank=30
 tvrring=Lehko Habhoka's
@@ -30,23 +28,23 @@ storm=None
 brd=True
 nsongs=Songs +7
 song1=Honor March
-song2=Victory March
+song2=Minuet III
 song3=Minuet V
 song4=Minuet IV
 song5=None
-marcato=False
+marcato=True
 soulvoice=False
 
 # COR inputs
-cor=False
+cor=True
 nrolls=Rolls +7
-roll1value=X
+roll1value=XI
 roll1=Chaos
 roll2v=IX
-roll2=Samurai
-crookedcards=False
-jobbonus=False
-lightshot=False
+roll2=Monk's
+crookedcards=True
+jobbonus=True
+lightshot=True
 
 # GEO inputs
 geo=False
@@ -59,38 +57,36 @@ blaze=False
 bolster=False
 
 # Enemy inputs
-ename=Octorok
-elocation=Hyrule
-elevel=1
-eevasion=1
-edevense=1
-
+ename=Lugcrawler Hunter
+elocation=Crawler's Nest [S]
+elevel=138
+eevasion=1314
+edefense=1446
 emagicevasion=0
 emagicdefense=0
-eagi=1
-evit=1
-eint=1
-emnd=1
+eagi=346
+evit=325
+eint=284
+emnd=284
 
 # Equipment and food inputs
 food=Grape Daifuku
-main=Naegling
-sub=Centovente2
+main=Helheim II
+sub=Utu Grip
 ranged=Empty
 ammo=Coiste Bodhar R0
-head=Ayanmo Zucchetto +2
-neck=Bard's Charm R15
-ear1=Brutal Earring
-ear2=Suppanomimi
-body=Ayanmo Corazza +2
-hands=Bunzi's Gloves R
-ring1=Lehko Habhoka's ring
-ring2=Rajas Ring
-back=Intarabus's Cape DEX DA
-waist=Shetal Stone
-legs=Volte Tights
-feet=Ayanmo Gambieras +2
-
+head=Sakpata's Helm R0
+neck=Fotia Gorget
+ear1=Boii Earring +1
+ear2=Moonshade Earring
+body=Sakpata's Breastplate R0
+hands=Sakpata's Gauntlets R0
+ring1=Niqmaddu Ring
+ring2=Regal Ring
+back=Cichol's Mantle STR DA
+waist=Fotia Belt
+legs=Sakpata's Cuisses R0
+feet=Pummeler's Calligae +3
 
 # Simulation inputs
 tp_main=Heishi Shorinken R15
