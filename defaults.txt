@@ -1,12 +1,12 @@
 # Basic inputs
-ml=35
-mainjob=NIN
-subjob=WAR
+ml=50
+mainjob=WAR
+subjob=SAM
 aftermath=0
-mintp=1900
-maxtp=2100
-spell=Doton: Ichi
-ws=Blade: Ten
+mintp=2000
+maxtp=2000
+spell=None
+ws=Resolution
 initialtp=0
 odyrank=30
 tvrring=Lehko Habhoka's
@@ -18,8 +18,8 @@ mdtreq=0
 
 # WHM inputs
 whm=True
-shell5=True
-dia=Dia II
+shell5=False
+dia=Dia III
 haste=Haste II
 boost=None
 storm=None
@@ -28,23 +28,23 @@ storm=None
 brd=True
 nsongs=Songs +7
 song1=Honor March
-song2=Victory March
+song2=Minuet III
 song3=Minuet V
 song4=Minuet IV
 song5=None
-marcato=False
+marcato=True
 soulvoice=False
 
 # COR inputs
 cor=True
 nrolls=Rolls +7
-roll1value=X
+roll1value=XI
 roll1=Chaos
 roll2v=IX
-roll2=Samurai
+roll2=Monk's
 crookedcards=True
 jobbonus=True
-lightshot=False
+lightshot=True
 
 # GEO inputs
 geo=False
@@ -71,22 +71,22 @@ emnd=284
 
 # Equipment and food inputs
 food=Grape Daifuku
-main=Heishi Shorinken R15
-sub=Crepuscular Knife
+main=Helheim II
+sub=Utu Grip
 ranged=Empty
-ammo=Seki Shuriken
-head=Malignance Chapeau
-neck=Ninja Nodowa +2 R25
-ear1=Dedition Earring
-ear2=Telos Earring
-body=Mpaca's Doublet R25
-hands=Malignance Gloves
-ring1=Gere Ring
-ring2=Lehko Habhoka's ring
-back=Andartia's Mantle AGI Store TP (Ranged)
-waist=Windbuffet Belt +1
-legs=Samnuha Tights
-feet=Malignance Boots
+ammo=Coiste Bodhar R0
+head=Sakpata's Helm R0
+neck=Fotia Gorget
+ear1=Boii Earring +1
+ear2=Moonshade Earring
+body=Sakpata's Breastplate R0
+hands=Sakpata's Gauntlets R0
+ring1=Niqmaddu Ring
+ring2=Regal Ring
+back=Cichol's Mantle STR DA
+waist=Fotia Belt
+legs=Sakpata's Cuisses R0
+feet=Pummeler's Calligae +3
 
 # Simulation inputs
 tp_main=Heishi Shorinken R15
@@ -123,4 +123,4 @@ ws_legs=Nyame Flanchard R25B
 ws_feet=Hattori Kyahan +3
 
 # Window size:  widthxheight
-dimensions=700x885
+dimensions=1210x1010
