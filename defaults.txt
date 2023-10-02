@@ -1,12 +1,12 @@
 # Basic inputs
 ml=50
-mainjob=WAR
-subjob=SAM
+mainjob=RDM
+subjob=NIN
 aftermath=0
-mintp=2000
-maxtp=2000
-spell=None
-ws=Resolution
+mintp=1250
+maxtp=1250
+spell=Stone V
+ws=Shining Strike
 initialtp=0
 odyrank=30
 tvrring=Lehko Habhoka's
@@ -21,27 +21,27 @@ whm=True
 shell5=False
 dia=Dia III
 haste=Haste II
-boost=None
+boost=Gain-INT
 storm=None
 
 # BRD inputs
-brd=True
+brd=False
 nsongs=Songs +7
 song1=Honor March
 song2=Minuet III
 song3=Minuet V
 song4=Minuet IV
 song5=None
-marcato=True
+marcato=False
 soulvoice=False
 
 # COR inputs
 cor=True
 nrolls=Rolls +7
 roll1value=XI
-roll1=Chaos
+roll1=Wizard's
 roll2v=IX
-roll2=Monk's
+roll2=Warlock's
 crookedcards=True
 jobbonus=True
 lightshot=True
@@ -71,22 +71,22 @@ emnd=284
 
 # Equipment and food inputs
 food=Grape Daifuku
-main=Helheim II
-sub=Utu Grip
+main=Bunzi's Rod R0
+sub=Maxentius
 ranged=Empty
-ammo=Coiste Bodhar R0
-head=Sakpata's Helm R0
-neck=Fotia Gorget
-ear1=Boii Earring +1
-ear2=Moonshade Earring
-body=Sakpata's Breastplate R0
-hands=Sakpata's Gauntlets R0
-ring1=Niqmaddu Ring
-ring2=Regal Ring
-back=Cichol's Mantle STR DA
-waist=Fotia Belt
-legs=Sakpata's Cuisses R0
-feet=Pummeler's Calligae +3
+ammo=Pemphredo Tathlum
+head=Lethargy Chappel +3
+neck=Sibyl Scarf
+ear1=Malignance Earring
+ear2=Regal Earring
+body=Lethargy Sayon +3
+hands=Lethargy Gantherots +3
+ring1=Freke Ring
+ring2=Empty
+back=Sucellos's Cape INT Magic Attack
+waist=Acuity Belt +1 R15
+legs=Lethargy Fuseau +3
+feet=Lethargy Houseaux +3
 
 # Simulation inputs
 tp_main=Heishi Shorinken R15
