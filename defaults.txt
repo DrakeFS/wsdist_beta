@@ -6,7 +6,7 @@ aftermath=0
 mintp=1000
 maxtp=1000
 spell=Stone V
-ws=Red Lotus Blade
+ws=Evisceration
 initialtp=0
 odyrank=30
 tvrring=Lehko Habhoka's
@@ -21,7 +21,7 @@ whm=True
 shell5=False
 dia=Dia III
 haste=Haste II
-boost=Gain-STR
+boost=Gain-DEX
 storm=None
 
 # BRD inputs
@@ -39,9 +39,9 @@ soulvoice=False
 cor=True
 nrolls=Rolls +7
 roll1value=XI
-roll1=Wizard's
+roll1=Chaos
 roll2v=IX
-roll2=Warlock's
+roll2=Monk's
 crookedcards=True
 jobbonus=True
 lightshot=True
@@ -70,22 +70,22 @@ eint=284
 emnd=284
 
 # Equipment and food inputs
-food=Grape Daifuku
-main=Vitiation Sword R20C
-sub=Thibron
+food=Sublime Sushi
+main=Tauret
+sub=Gleti's Knife R0
 ranged=Empty
 ammo=Oshasha's Treatise
 head=Lethargy Chappel +3
-neck=Sibyl Scarf
-ear1=Malignance Earring
-ear2=Regal Earring
+neck=Fotia Gorget
+ear1=Sherida Earring
+ear2=Moonshade Earring
 body=Lethargy Sayon +3
-hands=Jhakri Cuffs +2
-ring1=Freke Ring
+hands=Lethargy Gantherots +3
+ring1=Ilabrat Ring
 ring2=Cornelia's ring
 back=Sucellos's Cape STR Weapon Skill Damage
 waist=Fotia Belt
-legs=Lethargy Fuseau +3
+legs=Vitiation Tights +3
 feet=Lethargy Houseaux +3
 
 # Simulation inputs

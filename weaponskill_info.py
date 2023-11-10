@@ -444,10 +444,10 @@ def weaponskill_info(ws_name, tp, player, enemy, wsc_bonus, dual_wield):
         wsc = 0.4*(player_str + player_dex)
         nhits = 4
     elif ws_name == "Merciless Strike":
-        base_ftp = [1, 2, 3] 
+        base_ftp = [5.57, 14.07, 22.53] 
         ftp = np.interp(tp, base_tp, base_ftp)
-        ftp_rep = True 
-        wsc = 0.0*player_dex 
+        ftp_rep = False 
+        wsc = 0.2*(player_dex + player_vit)
         nhits = 4
 
 
