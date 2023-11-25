@@ -44,9 +44,12 @@ def run_simulation(player_tp, player_ws, enemy, ws_threshold, ws_name, ws_type, 
     ws_damage_list = []
     ws_time_list = []
 
-    total_time = 10*3600
+    total_time = 24*3600 # seconds
     avg_tp_dmg = []
     avg_ws_dmg = []
+
+    avg_ws_tp = [] # List containing the values of player TP when each WS was used (before TP Bonus)
+
     while time < total_time:
 
         while tp < ws_threshold:
@@ -64,8 +67,9 @@ def run_simulation(player_tp, player_ws, enemy, ws_threshold, ws_name, ws_type, 
             tp_damage_list.append(tp_damage)
             tp_time_list.append(time)
 
+        ws_sim = average_ws(player_ws, enemy, ws_name, tp + player_ws.stats.get("TP Bonus",0), ws_type, "Damage dealt", simulation=True)
+        avg_ws_tp.append(tp)
 
-        ws_sim = average_ws(player_ws, enemy, ws_name, tp, ws_type, "Damage dealt", simulation=True)
         damage += ws_sim[0]
         ws_damage += ws_sim[0]
         tp = ws_sim[1]
@@ -99,6 +103,7 @@ def run_simulation(player_tp, player_ws, enemy, ws_threshold, ws_name, ws_type, 
     Time/Attack: {time_per_attack_round:7.3f} s
     Average Dmg/Attack: {np.average(avg_tp_dmg):8.1f}
     Average Dmg/WS: {np.average(avg_ws_dmg):8.1f}
+    Average TP/WS: {np.average(avg_ws_tp):4.0f} (+{player_ws.stats.get("TP Bonus",0)} TP Bonus)
     Total Damage: {damage/1e6:5.1f}M damage (Total DPS: {damage/time:7.1f})
     TP Damage: {tp_damage/1e6:5.1f}M damage (TP DPS: {tp_damage/time:7.1f}; {tp_damage/damage*100:5.1f}%)
     WS Damage: {ws_damage/1e6:5.1f}M damage (WS DPS: {ws_damage/time:7.1f}; {ws_damage/damage*100:5.1f}%)
@@ -122,21 +127,21 @@ def average_attack_round(player, enemy, starting_tp, ws_threshold, input_metric,
     qa = player.stats.get("QA",0)/100 if player.stats.get("QA",0)/100 < 1.0 else 1.0
     ta = player.stats.get("TA",0)/100 if player.stats.get("TA",0)/100 < 1.0 else 1.0
     da = player.stats.get("DA",0)/100 if player.stats.get("DA",0)/100 < 1.0 else 1.0
-    oa8_main = player.stats.get("OA8 main",0)
-    oa7_main = player.stats.get("OA7 main",0)
-    oa6_main = player.stats.get("OA6 main",0)
-    oa5_main = player.stats.get("OA5 main",0)
-    oa4_main = player.stats.get("OA4 main",0)
-    oa3_main = player.stats.get("OA3 main",0)
-    oa2_main = player.stats.get("OA2 main",0)
+    oa8_main = player.stats.get("OA8 main",0)/100
+    oa7_main = player.stats.get("OA7 main",0)/100
+    oa6_main = player.stats.get("OA6 main",0)/100
+    oa5_main = player.stats.get("OA5 main",0)/100
+    oa4_main = player.stats.get("OA4 main",0)/100
+    oa3_main = player.stats.get("OA3 main",0)/100
+    oa2_main = player.stats.get("OA2 main",0)/100
 
-    oa8_sub = player.stats.get("OA8 sub",0)
-    oa7_sub = player.stats.get("OA7 sub",0)
-    oa6_sub = player.stats.get("OA6 sub",0)
-    oa5_sub = player.stats.get("OA5 sub",0)
-    oa4_sub = player.stats.get("OA4 sub",0)
-    oa3_sub = player.stats.get("OA3 sub",0)
-    oa2_sub = player.stats.get("OA2 sub",0)
+    oa8_sub = player.stats.get("OA8 sub",0)/100
+    oa7_sub = player.stats.get("OA7 sub",0)/100
+    oa6_sub = player.stats.get("OA6 sub",0)/100
+    oa5_sub = player.stats.get("OA5 sub",0)/100
+    oa4_sub = player.stats.get("OA4 sub",0)/100
+    oa3_sub = player.stats.get("OA3 sub",0)/100
+    oa2_sub = player.stats.get("OA2 sub",0)/100
     
     oa_list = np.array([player.stats.get("OA3 main",0), # Notice that there is no support for main-hand Kclub. Only the off-hand values support OA4+
             player.stats.get("OA2 main",0),
@@ -1067,7 +1072,7 @@ def average_ws(player, enemy, ws_name, input_tp, ws_type, input_metric, simulati
     #     Attributes also include player.main_job, player.sub_job, player.master_level, player.main_job_level, and player.sub_job_level
     # Enemy: Class which contains the enemy's stats (enemy.stats).
     # ws_name: The name of the weapon skill being used.
-    # tp: The TP value at which to use the WS. I apply TP bonus and limit TP to 3000 before this function is called. The TP being used by this function is the effective TP.
+    # tp: The TP value at which to use the WS. I apply TP bonus and limit TP to 3000 before this function is called. The TP being used by this function is the effective TP. TP Bonus has already been added when calling this function.
     # ws_type: includes ["melee","ranged","magical"] and is used to separate how the physical/magical portions of the damage contribute. Hybrid WSs are considered "melee" but activate a "hybrid" flag which enables their magical damage.
     #
 
@@ -1077,7 +1082,7 @@ def average_ws(player, enemy, ws_name, input_tp, ws_type, input_metric, simulati
 
     input_tp = 3000 if input_tp > 3000 else 1000 if input_tp < 1000 else input_tp
 
-    tp = input_tp + player.stats.get("TP Bonus",0)
+    tp = input_tp # TP Bonus is added when calling this function in gui_wsdist.py
     tp = 1000 if tp < 1000 else 3000 if tp > 3000 else tp
 
 
@@ -1109,20 +1114,22 @@ def average_ws(player, enemy, ws_name, input_tp, ws_type, input_metric, simulati
     qa = player.stats.get("QA",0)/100 if player.stats.get("QA",0)/100 < 1.0 else 1.0
     ta = player.stats.get("TA",0)/100 if player.stats.get("TA",0)/100 < 1.0 else 1.0
     da = player.stats.get("DA",0)/100 if player.stats.get("DA",0)/100 < 1.0 else 1.0
-    oa8_main = player.stats.get("OA8 main",0)
-    oa7_main = player.stats.get("OA7 main",0)
-    oa6_main = player.stats.get("OA6 main",0)
-    oa5_main = player.stats.get("OA5 main",0)
-    oa4_main = player.stats.get("OA4 main",0)
-    oa3_main = player.stats.get("OA3 main",0)
-    oa2_main = player.stats.get("OA2 main",0)
-    oa8_sub = player.stats.get("OA8 sub",0)
-    oa7_sub = player.stats.get("OA7 sub",0)
-    oa6_sub = player.stats.get("OA6 sub",0)
-    oa5_sub = player.stats.get("OA5 sub",0)
-    oa4_sub = player.stats.get("OA4 sub",0)
-    oa3_sub = player.stats.get("OA3 sub",0)
-    oa2_sub = player.stats.get("OA2 sub",0)
+    oa8_main = player.stats.get("OA8 main",0)/100
+    oa7_main = player.stats.get("OA7 main",0)/100
+    oa6_main = player.stats.get("OA6 main",0)/100
+    oa5_main = player.stats.get("OA5 main",0)/100
+    oa4_main = player.stats.get("OA4 main",0)/100
+    oa3_main = player.stats.get("OA3 main",0)/100
+    oa2_main = player.stats.get("OA2 main",0)/100
+    
+    oa8_sub = player.stats.get("OA8 sub",0)/100
+    oa7_sub = player.stats.get("OA7 sub",0)/100
+    oa6_sub = player.stats.get("OA6 sub",0)/100
+    oa5_sub = player.stats.get("OA5 sub",0)/100
+    oa4_sub = player.stats.get("OA4 sub",0)/100
+    oa3_sub = player.stats.get("OA3 sub",0)/100
+    oa2_sub = player.stats.get("OA2 sub",0)/100
+
     oa_list = np.array([player.stats.get("OA3 main",0), # Notice that there is no support for main-hand Kclub. Only the off-hand values support OA4+
             player.stats.get("OA2 main",0),
             player.stats.get("OA8 sub",0),
@@ -1235,7 +1242,6 @@ def average_ws(player, enemy, ws_name, input_tp, ws_type, input_metric, simulati
             main_hit_pdif = get_avg_pdif_melee(player_attack1, main_skill_type, pdl_trait, pdl_gear, enemy_defense, crit_rate)
             main_hit_damage = get_avg_phys_damage(main_dmg, fstr_main, wsc, main_hit_pdif, ftp2, crit_rate, crit_dmg, 0, ws_bonus, ws_trait) # Using FTP2, WSD=0, etc
             physical_damage += main_hits*main_hit_damage
-
 
             # Calculate the correction to the first hit based on the full set of buffs and bonuses.
 
