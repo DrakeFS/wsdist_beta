@@ -5,8 +5,8 @@ subjob=NIN
 aftermath=0
 mintp=1000
 maxtp=1000
-spell=Stone V
-ws=Evisceration
+spell=Stone III
+ws=Knights of Round
 initialtp=0
 odyrank=30
 tvrring=Lehko Habhoka's
@@ -71,21 +71,21 @@ emnd=284
 
 # Equipment and food inputs
 food=Sublime Sushi
-main=Tauret
-sub=Gleti's Knife R0
+main=Excalibur R15
+sub=Caliburnus V
 ranged=Empty
-ammo=Oshasha's Treatise
-head=Lethargy Chappel +3
-neck=Fotia Gorget
+ammo=Coiste Bodhar R30
+head=Nyame Helm R25B
+neck=Republican Platinum Medal
 ear1=Sherida Earring
-ear2=Moonshade Earring
-body=Lethargy Sayon +3
-hands=Lethargy Gantherots +3
-ring1=Ilabrat Ring
+ear2=Ishvara Earring
+body=Nyame Mail R15B
+hands=Vitiation Gloves +3
+ring1=Epaminondas's Ring
 ring2=Cornelia's ring
 back=Sucellos's Cape STR Weapon Skill Damage
-waist=Fotia Belt
-legs=Vitiation Tights +3
+waist=Sailfi Belt +1 R15
+legs=Nyame Flanchard R15B
 feet=Lethargy Houseaux +3
 
 # Simulation inputs
