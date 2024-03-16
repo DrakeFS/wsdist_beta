@@ -1102,7 +1102,7 @@ def average_ws(player, enemy, ws_name, input_tp, ws_type, input_metric, simulati
     ws_dSTAT = ws_info["dSTAT"]
 
     crit_rate = ws_info["crit_rate"] if ws_info["crit_rate"] < 1.0 else 1.0
-
+    
     ftp += player.stats.get("ftp",0)
     if hybrid:
         ftp_hybrid += player.stats.get("ftp",0)
@@ -1633,6 +1633,9 @@ def average_ws(player, enemy, ws_name, input_tp, ws_type, input_metric, simulati
         invert=1
 
     if simulation:
+        # Cap damage at 99999 for simulations if enabled
+        if player.abilities.get("99999", False):
+            total_damage = 99999 if total_damage > 99999 else total_damage
         return(total_damage, tp_return)
     else:
         return(metric, [total_damage, tp_return, invert])
