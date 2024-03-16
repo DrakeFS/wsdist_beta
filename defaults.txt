@@ -1,12 +1,12 @@
 # Basic inputs
 ml=50
-mainjob=RDM
-subjob=NIN
+mainjob=BLU
+subjob=DRG
 aftermath=0
-mintp=1000
-maxtp=1000
-spell=Stone III
-ws=Knights of Round
+mintp=1500
+maxtp=1500
+spell=None
+ws=Sanguine Blade
 initialtp=0
 odyrank=30
 tvrring=Lehko Habhoka's
@@ -17,31 +17,31 @@ pdtreq=0
 mdtreq=0
 
 # WHM inputs
-whm=True
+whm=False
 shell5=False
 dia=Dia III
 haste=Haste II
-boost=Gain-DEX
+boost=None
 storm=None
 
 # BRD inputs
-brd=True
+brd=False
 nsongs=Songs +7
 song1=Honor March
-song2=Minuet IV
+song2=Aria of Passion
 song3=Minuet V
-song4=Aria of Passion
+song4=Minuet IV
 song5=None
-marcato=True
+marcato=False
 soulvoice=False
 
 # COR inputs
 cor=True
 nrolls=Rolls +7
 roll1value=XI
-roll1=Chaos
+roll1=Wizard's
 roll2v=IX
-roll2=Monk's
+roll2=Samurai
 crookedcards=True
 jobbonus=True
 lightshot=True
@@ -50,9 +50,9 @@ lightshot=True
 geo=False
 nbubble=Geomancy +10
 geopotency=25
-indi=Indi-Fury
-geo=Geo-Frailty
-entrust=None
+indi=Indi-Acumen
+geo=Geo-Malaise
+entrust=Entrust-AGI
 blaze=False
 bolster=False
 
@@ -71,22 +71,22 @@ emnd=284
 
 # Equipment and food inputs
 food=Sublime Sushi
-main=Excalibur R15
-sub=Caliburnus V
+main=Naegling
+sub=Bunzi's Rod R0
 ranged=Empty
-ammo=Coiste Bodhar R30
-head=Nyame Helm R25B
-neck=Republican Platinum Medal
-ear1=Sherida Earring
-ear2=Ishvara Earring
-body=Nyame Mail R15B
-hands=Vitiation Gloves +3
-ring1=Epaminondas's Ring
-ring2=Cornelia's ring
-back=Sucellos's Cape STR Weapon Skill Damage
-waist=Sailfi Belt +1 R15
-legs=Nyame Flanchard R15B
-feet=Lethargy Houseaux +3
+ammo=Oshasha's Treatise
+head=Pixie Hairpin +1
+neck=Fotia Gorget
+ear1=Friomisi Earring
+ear2=Regal Earring
+body=Hashishin Mintan +3
+hands=Hashishin Bazubands +3
+ring1=Cornelia's ring
+ring2=Archon Ring
+back=Rosmerta's Cape INT Weapon Skill Damage
+waist=Fotia Belt
+legs=Luhlaza Shalwar +3
+feet=Hashishin Basmak +3
 
 # Simulation inputs
 tp_main=Naegling
