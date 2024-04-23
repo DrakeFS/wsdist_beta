@@ -1,12 +1,12 @@
 # Basic inputs
 ml=50
-mainjob=BLU
-subjob=DRG
+mainjob=RDM
+subjob=NIN
 aftermath=0
-mintp=1500
-maxtp=1500
-spell=None
-ws=Sanguine Blade
+mintp=1000
+maxtp=1000
+spell=Stone
+ws=Chant du Cygne
 initialtp=0
 odyrank=30
 tvrring=Lehko Habhoka's
@@ -17,15 +17,15 @@ pdtreq=0
 mdtreq=0
 
 # WHM inputs
-whm=False
+whm=True
 shell5=False
 dia=Dia III
 haste=Haste II
-boost=None
+boost=Gain-DEX
 storm=None
 
 # BRD inputs
-brd=False
+brd=True
 nsongs=Songs +7
 song1=Honor March
 song2=Aria of Passion
@@ -36,15 +36,15 @@ marcato=False
 soulvoice=False
 
 # COR inputs
-cor=True
+cor=False
 nrolls=Rolls +7
 roll1value=XI
 roll1=Wizard's
 roll2v=IX
 roll2=Samurai
-crookedcards=True
-jobbonus=True
-lightshot=True
+crookedcards=False
+jobbonus=False
+lightshot=False
 
 # GEO inputs
 geo=False
@@ -71,22 +71,22 @@ emnd=284
 
 # Equipment and food inputs
 food=Sublime Sushi
-main=Naegling
-sub=Bunzi's Rod R0
+main=Almace R15
+sub=Gleti's Knife R0
 ranged=Empty
-ammo=Oshasha's Treatise
-head=Pixie Hairpin +1
+ammo=Coiste Bodhar R0
+head=Vitiation Chapeau +3
 neck=Fotia Gorget
-ear1=Friomisi Earring
-ear2=Regal Earring
-body=Hashishin Mintan +3
-hands=Hashishin Bazubands +3
-ring1=Cornelia's ring
-ring2=Archon Ring
-back=Rosmerta's Cape INT Weapon Skill Damage
+ear1=Sherida Earring
+ear2=Lethargy Earring +1
+body=Ayanmo Corazza +2
+hands=Nyame Gauntlets R15B
+ring1=Begrudging Ring
+ring2=Ilabrat Ring
+back=Sucellos's Cape DEX DA
 waist=Fotia Belt
 legs=Luhlaza Shalwar +3
-feet=Hashishin Basmak +3
+feet=Lethargy Houseaux +3
 
 # Simulation inputs
 tp_main=Naegling
