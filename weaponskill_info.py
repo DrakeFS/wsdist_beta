@@ -468,7 +468,7 @@ def weaponskill_info(ws_name, tp, player, enemy, wsc_bonus, dual_wield):
         base_ftp = [5.375, 14.0, 23.0] 
         ftp = np.interp(tp, base_tp, base_ftp)
         ftp_rep = False 
-        wsc = 0.25*(player_dex + player_vit)
+        wsc = 0.25*(player_dex + player_agi)
         nhits = 4
         sc = ["Liquefaction","Impaction","Fragmentation"]
 
@@ -921,6 +921,7 @@ def weaponskill_info(ws_name, tp, player, enemy, wsc_bonus, dual_wield):
         ftp_rep = False 
         wsc = 0.6*(player_str + player_vit)
         sc = ["Detonation","Compression","Distortion"]
+        nhits = 1
 
     # Club weapon skills
     elif ws_name == "Shining Strike":
