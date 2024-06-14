@@ -3,10 +3,10 @@ ml=50
 mainjob=RDM
 subjob=NIN
 aftermath=0
-mintp=1000
-maxtp=1000
+mintp=1750
+maxtp=1750
 spell=Stone
-ws=Chant du Cygne
+ws=Sanguine Blade
 initialtp=0
 odyrank=30
 tvrring=Lehko Habhoka's
@@ -21,11 +21,11 @@ whm=True
 shell5=False
 dia=Dia III
 haste=Haste II
-boost=Gain-DEX
+boost=None
 storm=None
 
 # BRD inputs
-brd=True
+brd=False
 nsongs=Songs +7
 song1=Honor March
 song2=Aria of Passion
@@ -39,9 +39,9 @@ soulvoice=False
 cor=False
 nrolls=Rolls +7
 roll1value=XI
-roll1=Wizard's
+roll1=Chaos
 roll2v=IX
-roll2=Samurai
+roll2=Wizard's
 crookedcards=False
 jobbonus=False
 lightshot=False
@@ -71,21 +71,21 @@ emnd=284
 
 # Equipment and food inputs
 food=Sublime Sushi
-main=Almace R15
-sub=Gleti's Knife R0
+main=Vitiation Sword R20C
+sub=Daybreak
 ranged=Empty
-ammo=Coiste Bodhar R0
-head=Vitiation Chapeau +3
-neck=Fotia Gorget
-ear1=Sherida Earring
-ear2=Lethargy Earring +1
-body=Ayanmo Corazza +2
-hands=Nyame Gauntlets R15B
-ring1=Begrudging Ring
-ring2=Ilabrat Ring
-back=Sucellos's Cape DEX DA
-waist=Fotia Belt
-legs=Luhlaza Shalwar +3
+ammo=Sroda Tathlum
+head=Pixie Hairpin +1
+neck=Sibyl Scarf
+ear1=Ishvara Earring
+ear2=Regal Earring
+body=Lethargy Sayon +3
+hands=Lethargy Gantherots +3
+ring1=Cornelia's ring
+ring2=Archon Ring
+back=Sucellos's Cape INT Weapon Skill Damage
+waist=Sacro Cord
+legs=Lethargy Fuseau +3
 feet=Lethargy Houseaux +3
 
 # Simulation inputs
@@ -125,4 +125,4 @@ ws_feet=Hattori Kyahan +3
 DamageLimit=True
 
 # Window size:  widthxheight
-dimensions=1210x1010
+dimensions=861x1010
